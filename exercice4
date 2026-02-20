@@ -1,0 +1,31 @@
+    let utilisateur = {
+        nom: "Alice",
+        age: 25,
+        actif: true,
+        email: "alice@example.com"
+    };
+
+    function presenter(user) {
+        return `${user.nom} a ${user.age} ans et est actuellement ${user.actif ? "actif" : "inactif"}.`;
+    }
+    console.log(presenter(utilisateur));
+
+    function anniversaire(user) {
+        user.age += 1;
+    }
+    console.log(utilisateur.age);
+
+    function desactiverCompte(user) {
+        user.actif = false;
+    }
+
+    function ajouterVille(user, ville) {
+        user.ville = ville;
+    }
+
+    function copierAvecNouveauNom(user, nouveauNom) {
+        let copie = { ...user };
+        copie.nom = nouveauNom;
+        return copie;
+    }
+
