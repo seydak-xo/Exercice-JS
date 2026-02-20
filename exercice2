@@ -1,0 +1,19 @@
+    const age = parseInt(prompt("Entrez votre âge :"));
+    function estMajeur(age) {
+        return age >= 18;
+    }
+
+    function estAgeValide(age) {
+        return age >= 0 && age <= 150;
+    }
+
+
+
+    if (!estAgeValide(age)) {
+        console.log("Veuillez entrer un âge valide.");
+    } else if (estMajeur(age)) {
+        console.log("Vous êtes majeur.");
+    } else {
+        console.log("Vous êtes mineur.");
+    }
+
