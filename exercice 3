@@ -1,0 +1,43 @@
+ function calculerMoyenne(tableau) {
+        let somme = 0;
+        for (let note of tableau) {
+            somme += note;
+        }
+        return somme / tableau.length;
+    }
+    let moyenne = calculerMoyenne(notes);
+    console.log("Moyenne :", moyenne);
+
+
+    function trouverMax(tableau) {
+        return Math.max(...tableau);
+    }
+    console.log("Meilleure note :", trouverMax(notes));
+
+    function trouverMin(tableau) {
+        return Math.min(...tableau);
+    }
+    console.log("Moins bonne note :", trouverMin(notes));
+
+
+    function compterReussites(tableau) {
+        let compteur = 0;
+        for (let note of tableau) {
+            if (note >= 10) compteur++;
+        }
+        return compteur;
+    }
+    console.log("Nombre de réussites :", compterReussites(notes));
+
+
+    function obtenirMention(moyenne) {
+        if (moyenne >= 16) return "Très bien";
+        else if (moyenne >= 14) return "Bien";
+        else if (moyenne >= 12) return "Assez bien";
+        else if (moyenne >= 10) return "Passable";
+        else return "Échec";
+    }
+    console.log("Mention :", obtenirMention(moyenne));
+
+
+
